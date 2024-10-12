@@ -1,4 +1,8 @@
-import { Outlet } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { NavLink, Outlet } from "react-router-dom";
 
 const AuthLayout = () => {
   return (
