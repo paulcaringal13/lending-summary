@@ -12,13 +12,14 @@ import LoginPage from "./pages/auth/LoginPage";
 
 // ROOT
 import RootLayout from "./layout/root/RootLayout";
+import ForgotPasswordPage from "./pages/auth/ForgotPasswordPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/forgot-password" element={<div>Management</div>} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
       </Route>
       <Route element={<RootLayout />}>
         <Route path="/management" element={<div>Management</div>} />
