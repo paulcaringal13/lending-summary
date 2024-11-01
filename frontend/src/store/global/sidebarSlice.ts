@@ -1,11 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export type SidebarState = {
-	isCollapsed: boolean;
+	value: {
+		isSidebarCollapsed: boolean;
+		isSheetCollapsed: boolean;
+	};
 };
 
 const initialState: SidebarState = {
-	isCollapsed: false,
+	value: {
+		isSidebarCollapsed: false,
+		isSheetCollapsed: false,
+	},
 };
 
 export const sidebarSlice = createSlice({
@@ -13,14 +19,21 @@ export const sidebarSlice = createSlice({
 	initialState,
 	reducers: {
 		collapseSidebar: (state) => {
-			state.isCollapsed = false;
+			state.value.isSidebarCollapsed = false;
 		},
 		openSidebar: (state) => {
-			state.isCollapsed = true;
+			state.value.isSidebarCollapsed = true;
+		},
+		toggleSidebar: (state) => {
+			state.value.isSidebarCollapsed = !state.value.isSidebarCollapsed;
+		},
+		toggleSheet: (state) => {
+			state.value.isSheetCollapsed = !state.value.isSheetCollapsed;
 		},
 	},
 });
 
-export const { collapseSidebar, openSidebar } = sidebarSlice.actions;
+export const { collapseSidebar, openSidebar, toggleSidebar, toggleSheet } =
+	sidebarSlice.actions;
 
 export default sidebarSlice.reducer;
