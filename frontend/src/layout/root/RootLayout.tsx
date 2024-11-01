@@ -1,20 +1,22 @@
+import TextLogo from "@/components/common/TextLogo";
+
 const RootLayout = () => {
-  return (
-    <div className="h-20 w-20 bg-green-500">
-      <header className="flex justify-between w-full h-[10%] px-10  bg-green-500">
-        <div className="bg-red-500 h-fit my-auto">
-          <p className="text-4xl">LOGO</p>
-        </div>
-        <nav className="my-auto">
-          <ul className="flex gap-2 h-fit bg-yellow-500">
-            <li>Home</li>
-            <li>Management</li>
-            <li>Profile</li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-  );
+	return (
+		<div className="grow">
+			<aside className="flex w-[15em] h-full bg-primary shadow-xl">
+				<div className="flex h-[3em] w-full text-center items-center">
+					<TextLogo className="text-white" text="treblend" />
+				</div>
+				{/* <nav className="my-auto">
+					<ul className="flex gap-2 h-fit bg-yellow-500">
+						<li>Home</li>
+						<li>Management</li>
+						<li>Profile</li>
+					</ul>
+				</nav> */}
+			</aside>
+		</div>
+	);
 };
 
 export default RootLayout;
