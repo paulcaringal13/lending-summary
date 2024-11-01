@@ -13,10 +13,9 @@ module.exports = {
         "2xl": "1536px",
       },
       fontFamily: {
-        alfacad: ["Afacad Flux"],
-        oswald: ["Oswald"],
         rubik: ["Rubik"],
         brubik: ["Rubik Mono One"],
+        baskerville: ["Baskervville SC"],
       },
       borderRadius: {
         lg: "var(--radius)",
