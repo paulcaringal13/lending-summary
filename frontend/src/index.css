@@ -76,7 +76,19 @@
 }
 
 @layer components {
-	.remove-outline {
-		@apply text-5xl;
+	.button-ghost {
+		@apply rounded-md bg-transparent hover:border-[1px] hover:border-primary active:bg-primary active:text-white transition-none;
+	}
+
+	.collapsed-nav-button {
+		@apply outline-none bg-transparent hover:border-none active:bg-transparent w-[90%] transition duration-300;
+	}
+
+	.common-transition {
+		@apply transition-all duration-500 ease-in-out;
+	}
+
+	.border-thin {
+		@apply border-[1px] border-zinc-200;
 	}
 }
